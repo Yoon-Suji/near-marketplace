@@ -10,12 +10,13 @@ import "./App.css";
 
 function App() {
   const account = window.walletConnection.account();
-  const [products, setProducts] = useState([]);
-  const fetchProducts = useCallback(async () => {
+  const [balance, setBalance] = useState("0");
+  const getBalance = useCallback(async () => {
     if (account.accountId) {
       setBalance(await accountBalance());
     }
   });
+
   useEffect(() => {
     getBalance();
   }, [getBalance]);
