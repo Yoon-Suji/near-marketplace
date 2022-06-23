@@ -4,6 +4,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { initializeContract } from "./utils/near";
 
+import "bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 // window.nearInitPromise variable to make sure that the app doesn't render until the contract is initialized.
 window.nearInitPromise = initializeContract()
   .then(() => {
